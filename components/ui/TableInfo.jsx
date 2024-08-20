@@ -1,6 +1,6 @@
 import {
   Table,
-  TableBody,  
+  TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -10,11 +10,11 @@ import axios from "axios";
 
 export default async function ({ proyectInfo, table }) {
   const { data } = await axios.get(
-    `http://localhost:3000/api/fastcrud/connections/${proyectInfo.IDconnection}/${table}`,
+    `https://hedera-fastcrud.vercel.app/api/fastcrud/connections/${proyectInfo.IDconnection}/${table}`,
     {
-      headers:{
-        "Authorization":process.env.NEXTAUTH_SECRET
-      }
+      headers: {
+        Authorization: process.env.NEXTAUTH_SECRET,
+      },
     }
   );
   return (

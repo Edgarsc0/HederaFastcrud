@@ -27,7 +27,7 @@ export async function middleware(request) {
             const hederaId = request.headers.get("HederaId");
             const hederaPrivate = request.headers.get("HederaPrivate");
 
-            await axios.post("http://localhost:3000/api/hedera", {
+            await axios.post("https://hedera-fastcrud.vercel.app/api/hedera", {
                 hederaId, hederaPrivate
             });
             return NextResponse.next();
