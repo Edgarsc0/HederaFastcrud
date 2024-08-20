@@ -1,6 +1,5 @@
 import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server';
-import { TokenAssociateTransaction, TransferTransaction, AccountId, PrivateKey, AccountBalanceQuery, Client } from "@hashgraph/sdk";
 import axios from 'axios';
 
 export async function middleware(request) {
